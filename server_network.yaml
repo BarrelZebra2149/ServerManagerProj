@@ -1,0 +1,16 @@
+network:
+  version: 2
+  renderer: networkd          # Usually this on servers (not NetworkManager)
+  ethernets:
+    enp0s31f6:                     # ← your interface name (check with `ip link`)
+      dhcp4: false
+      addresses:
+        - YOUR_SERVER_IP/32   # e.g. 203.0.113.45/32  ← your public/server IP + mask (often /32 on VPS)
+      routes:
+        - to: YOUR_GATEWAY_IP
+          scope: link         # ← Step 1: Tell kernel "YOUR_GATEWAY_IP is directly attached to this interface"
+        - to: default         # ← Step 2: Add the actual default route via that gateway
+          via: YOUR_GATEWAY_IP
+          on-link: true       # ← Makes kernel accept the via: even though gateway not in subnet
+      nameservers:
+        addresses: [YOUR_DNS_ADDRESSES]   # e.g. [8.8.8.8, 1.1.1.1] or your provider's DNS
