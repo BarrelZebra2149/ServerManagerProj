@@ -13,7 +13,7 @@ run_jupyter() {
 
     # Check for virtual environment
     if [ -d "${WORK_DIR}/bin" ]; then
-        local PORT=$(hostname -I | awk '{print $1}')  # Using your attempted port
+        local PORT=$(shuf -i 8000-9999 -n 1)  # Using your attempted port
         local INFOFILE="${WORK_DIR}/jupyter_info_${PORT}.txt"
 
         echo "Starting Jupyter..."
