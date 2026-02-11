@@ -40,7 +40,9 @@ run_jupyter() {
         } > "$INFOFILE"
 
         echo "------------------------------------------------"
-        echo "Jupyter Lab process started."
+        echo "Jupyter Lab is running on port ${PORT}"
+        echo "Details saved in: $INFOFILE"
+        echo "Type this: cat ${INFOFILE}"
         echo "Check log: cat ${WORK_DIR}/jupyter.log"
         echo "------------------------------------------------"
     else
