@@ -3,6 +3,9 @@
 # Target user is the current user ($USER)
 TARGET_USER="$USER"
 
+# SSH port of the server (set it before running, e.g. export SSH_PORT=2222)
+SSH_PORT="${SSH_PORT:-YOUR_SSH_PORT}"
+
 run_jupyter() {
     local USER_NAME="$TARGET_USER"
     local HOME_DIR="/home/${USER_NAME}"
@@ -36,7 +39,7 @@ run_jupyter() {
         {
             echo "Port: $PORT"
             echo "SSH Tunnel Command:"
-            echo "ssh -p [SSH_PORT] -N -L ${PORT}:localhost:${PORT} ${USER_NAME}@${CLUSTER_NAME}"
+            echo "ssh -p ${SSH_PORT} -N -L ${PORT}:localhost:${PORT} ${USER_NAME}@${CLUSTER_NAME}"
         } > "$INFOFILE"
 
         echo "------------------------------------------------"
