@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="sans-serif" font-size="13">
+<rect width="760" height="360" fill="#fff"/>
+<rect x="20" y="20" width="420" height="320" rx="10" fill="#f3f6fb" stroke="#4a6fa5"/>
+<text x="34" y="42" font-weight="bold">관리 서버 (K3s)</text>
+<rect x="36" y="56" width="120" height="44" rx="6" fill="#dbe7f7" stroke="#4a6fa5"/><text x="46" y="83">ssm-web (화면)</text>
+<rect x="170" y="56" width="120" height="44" rx="6" fill="#dbe7f7" stroke="#4a6fa5"/><text x="180" y="83">ssm-api (백엔드)</text>
+<rect x="304" y="56" width="120" height="44" rx="6" fill="#dbe7f7" stroke="#4a6fa5"/><text x="312" y="83">ssm-worker</text>
+<rect x="36" y="116" width="120" height="44" rx="6" fill="#e8f0e0" stroke="#6a8f4a"/><text x="44" y="143">postgres-mgmt</text>
+<rect x="170" y="116" width="120" height="44" rx="6" fill="#e8f0e0" stroke="#6a8f4a"/><text x="176" y="143">postgres-capstone</text>
+<rect x="304" y="116" width="120" height="44" rx="6" fill="#f5e9d4" stroke="#b08840"/><text x="326" y="143">LiteLLM</text>
+<rect x="36" y="180" width="388" height="44" rx="6" fill="#efe3f5" stroke="#8a5aa5"/><text x="46" y="207">ArgoCD ← GitHub 저장소를 보고 자동 배포</text>
+<rect x="36" y="240" width="388" height="40" rx="6" fill="#fdf0d8" stroke="#c08a30"/><text x="46" y="265">Tailscale Funnel (HTTPS 만 공개)</text>
+<text x="36" y="310" fill="#555">학생 sudo 가 없는 서버. 사이트의 모든 구성이 여기서 동작</text>
+<rect x="480" y="20" width="260" height="140" rx="10" fill="#f7f7f7" stroke="#888"/>
+<text x="494" y="42" font-weight="bold">모든 서버 (호스트)</text>
+<rect x="496" y="56" width="228" height="40" rx="6" fill="#fde2e2" stroke="#b05050"/><text x="508" y="81">ssm-agent (사설 IP 에만 바인딩)</text>
+<text x="496" y="120" fill="#555">계정·키·백업·지표·재부팅</text>
+<text x="496" y="140" fill="#555">허용된 작업만 수행</text>
+<rect x="480" y="200" width="260" height="140" rx="10" fill="#fff" stroke="#888"/>
+<text x="494" y="224" font-weight="bold">사용자</text>
+<text x="494" y="250">학생 · 서버 관리자 · 학과장</text>
+<text x="494" y="272">브라우저로 접속 (학교 안/밖 동일)</text>
+<text x="494" y="294">웹 터미널: SSH 인증서(5분)</text>
+<line x1="440" y1="80" x2="480" y2="76" stroke="#444" marker-end="url(#a)"/>
+<line x1="610" y1="200" x2="440" y2="262" stroke="#444" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#444"/></marker></defs>
+</svg>

@@ -8,6 +8,7 @@ A small collection of Jupyter notebooks and helper scripts for documenting and m
   - 🐚 [jupyter_lab_execute.sh](jupyter_lab_execute.sh): Shell helper to run Jupyter Lab (Linux/macOS). Adjust for Windows or WSL as needed.
   - 📓 [Jupyter_setting.ipynb](Jupyter_setting.ipynb): Notebook with Jupyter configuration, settings, and examples.
   - 🧭 [ServerManage.ipynb](ServerManage.ipynb): Main notebook demonstrating server management tasks and workflows.
+  - 🏫 [school-gpu-site/](school-gpu-site/README.md): Step-by-step build guide (notebooks + PDF) for a school GPU server management site (private IP, K3s, ArgoCD, Tailscale Funnel).
   - 🌐 [server_network.yaml](server_network.yaml): YAML describing the server/network configuration used by the notebooks or tools.
 
 **Purpose** 💡
